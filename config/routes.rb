@@ -1,21 +1,7 @@
 Rails.application.routes.draw do
-  get 'podcasts/index'
-  get 'podcasts/new'
-  get 'podcasts/create'
-  get 'podcasts/show'
-  get 'podcasts/edit'
-  get 'podcasts/update'
-  get 'podcasts/delete'
-  get 'episodes/create'
-  get 'episodes/index'
-  get 'episodes/new'
-  get 'episodes/show'
-  get 'episodes/edit'
-  get 'podcasts/new'
-  get 'podcasts/create'
-  get 'podcasts/show'
-  get 'podcasts/edit'
-  get 'podcasts/update'
-  get 'podcasts/delete'
+  devise_for :users
+  resources :podcasts
+  resources :episodes 
+  root 'podcasts#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

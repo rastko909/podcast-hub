@@ -4,6 +4,7 @@ class CreatePodcasts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :genre
       t.string :explicit_content
+      t.string :url
 
       t.timestamps
     end

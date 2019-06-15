@@ -1,2 +1,4 @@
-<h1>Podcasts#show</h1>
-<p>Find me in app/views/podcasts/show.html.erb</p>
+<% @episodes.each do |episode| %>
+  <%= episode[:title] %>
+	<br>
+<% end %>

@@ -1,2 +1,7 @@
-<h1>Podcasts#index</h1>
-<p>Find me in app/views/podcasts/index.html.erb</p>
+<% @podcasts.each do |podcast| %>
+  <div class="card d-flex flex-column m-2 w-25">
+    <img src="<%= podcast.channel_image %>" class="card-img-top" alt="<%= podcast.description %>">
+    <ul class="list-group list-group-flush">
+    <%= link_to "View All Episodes", podcast_path(podcast.id), class: "align-self-end btn btn-block btn-primary" %>
+  </div>
+<% end %>
